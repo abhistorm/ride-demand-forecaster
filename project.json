@@ -1,0 +1,54 @@
+{
+  "id": "056",
+  "slug": "056-ride-demand-forecaster",
+  "name": "Ride Demand Forecaster",
+  "domain": "Transportation & mobility",
+  "domain_slug": "mobility",
+  "task_type": "regression",
+  "target": "p056_ride_demand_forecaster_outcome_value",
+  "features": [
+    "p056_ride_demand_forecaster_trip_distance_km",
+    "p056_ride_demand_forecaster_congestion_index",
+    "p056_ride_demand_forecaster_avg_speed_kmh",
+    "p056_ride_demand_forecaster_stop_count",
+    "p056_ride_demand_forecaster_fuel_efficiency",
+    "p056_ride_demand_forecaster_vehicle_age_years",
+    "p056_ride_demand_forecaster_rain_intensity",
+    "p056_ride_demand_forecaster_route_grade_pct",
+    "p056_ride_demand_forecaster_driver_hours",
+    "p056_ride_demand_forecaster_passenger_count"
+  ],
+  "model_key": "k-nearest-neighbors",
+  "model_class": "KNeighborsRegressor",
+  "serving": "FastAPI",
+  "extension_focus": "Weights & Biases experiment tracking",
+  "seed": 202656,
+  "rows": 418237,
+  "dataset_bytes": 39097590,
+  "model_training": {
+    "source": "synthetic dataset bundled with this project",
+    "sample_rows": 5000,
+    "fit_rows": 4000,
+    "holdout_rows": 1000,
+    "metrics": {
+      "mae": 0.9689,
+      "rmse": 1.2149,
+      "r2": 0.8395
+    },
+    "artifact": "models/model.joblib"
+  },
+  "gui_feature": {
+    "mode": "quality",
+    "title": "Ride Demand Forecaster · Input quality check",
+    "description": "Check missing, non-finite, and out-of-demo-range values before inference. This panel is tuned to Ride Demand Forecaster and its p056 ride demand forecaster vehicle age years signal.",
+    "focus_feature": "p056_ride_demand_forecaster_vehicle_age_years",
+    "mode_title": "Input quality check"
+  },
+  "gui": {
+    "frontend": "HTML/CSS/JavaScript",
+    "backend": "FastAPI",
+    "standalone": true
+  },
+  "model_artifact": "models/model.joblib",
+  "model_bytes": 755628
+}

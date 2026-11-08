@@ -1,0 +1,14 @@
+{
+  "features": {
+    "p056_ride_demand_forecaster_trip_distance_km": 0.0,
+    "p056_ride_demand_forecaster_congestion_index": 0.0,
+    "p056_ride_demand_forecaster_avg_speed_kmh": 0.0,
+    "p056_ride_demand_forecaster_stop_count": 0.0,
+    "p056_ride_demand_forecaster_fuel_efficiency": 0.0,
+    "p056_ride_demand_forecaster_vehicle_age_years": 0.0,
+    "p056_ride_demand_forecaster_rain_intensity": 0.0,
+    "p056_ride_demand_forecaster_route_grade_pct": 0.0,
+    "p056_ride_demand_forecaster_driver_hours": 0.0,
+    "p056_ride_demand_forecaster_passenger_count": 0.0
+  }
+}
